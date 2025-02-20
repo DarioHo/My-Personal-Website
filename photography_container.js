@@ -3,7 +3,7 @@ function generateImagePaths(startNumber, endNumber) {
     for (let i = startNumber; i <= endNumber; i++) {
       // Convert number to 3-digit format (e.g., 1 -> 001)
       const paddedNumber = String(i).padStart(3, '0');
-      images.push(`image/photography/${paddedNumber}.jpg`);
+      images.push(`image/photography/${paddedNumber}.webp`);
     }
     return images;
   }
