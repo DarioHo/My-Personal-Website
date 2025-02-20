@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dario's Personal Blog & Projects</title>
+    <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+    <div class="navigation_bar"> 
+        <ul>
+            <li><a class="navigation_bar_active" href="main.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li> 
+            <li><a href="resources.html">Resources</a></li>
+            <li><a href="blog.html">Blog</a></li> 
+            <li><a href="photography.html">Photography</a></li> 
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="live_time_clock">
+        <span id="clock_time"></span>
+    </div>
+
+    <div class="sliding_text_container">
+        <div class="sliding_text">
+            Welcome to my website! Exploring Embedded Systems, Technology, and Creative Expressions.
+        </div>
+    </div>
+
+    <script src="update_clock.js"></script>
+
+    <div class="content_wrapper">
+        <div class="main_header_section"> 
+            <h1>Welcome to My Personal Space!</h1>
+
+            <p>Hi, I’m <strong>Dario</strong>, an Embedded Software Engineer with a passion for <strong>technology, problem-solving, and creative expression</strong>. Originally from <strong>Hong Kong</strong>, I am now based in the <strong>United Kingdom</strong>, working on projects that bridge <strong>hardware, firmware, and software</strong>.</p>
+
+            <p>This website is where I share my journey—whether it’s <strong>building embedded systems, writing about technology, or capturing moments through photography</strong>.</p>
+
+            <p>Here, you’ll find:</p>
+            <ul>
+                <li><strong>Projects</strong>: Hands-on experiences with <strong>microcontrollers (STM32, ESP32, Raspberry Pi), real-time systems (RTOS), and firmware development</strong>, alongside other tech experiments.</li>
+                <li><strong>Tech Blog</strong>: Articles covering <strong>embedded software, IoT, system optimization, and programming</strong>, as well as general discussions on <strong>technology trends</strong>.</li>
+                <li><strong>Photography & Creativity</strong>: A collection of <strong>visual stories, travel photography, and moments that inspire me</strong>.</li>
+                <li><strong>Personal Interests</strong>: A space to explore <strong>music, literature, and my journey in learning German and Japanese</strong>.</li>
+            </ul>
+
+            <p>Whether you're here for <strong>technology, creativity, or inspiration</strong>, I hope you find something that resonates with you. 🚀📸</p>
+        </div>
+
+        <div class="rss_feed_section">
+            <h1>Ars Technica RSS Feed</h1>
+            <div id="feed"></div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer_close-btn">&times;</div>
+        <div class="footer_section">
+            <div class="social_media_image">
+                <img src="image/social_media/facebook.png" alt="Facebook">
+                <div class="image_overlay">
+                    <a href="https://www.facebook.com" class="image_link" style="display: block; width: 100%; height: 100%;"></a>
+                </div>
+            </div>
+            <div class="social_media_image">
+                <img src="image/social_media/instagram.png" alt="Instagram">
+                <div class="image_overlay">
+                    <a href="https://www.instagram.com" class="image_link" style="display: block; width: 100%; height: 100%;"></a>
+                </div>
+            </div>
+            <div class="social_media_image">
+                <img src="image/social_media/x.png" alt="X">
+                <div class="image_overlay">
+                    <a href="https://x.com/" class="image_link" style="display: block; width: 100%; height: 100%;"></a>
+                </div>
+            </div>
+            <div class="social_media_image">
+                <img src="image/social_media/youtube.png" alt="YouTube">
+                <div class="image_overlay">
+                    <a href="https://www.youtube.com" class="image_link" style="display: block; width: 100%; height: 100%;"></a>
+                </div>
+            </div>
+        </div>
+
+        <p>© 2024 Dario’s Blog & Projects. All rights reserved.</p>
+    </footer>
+
+    <script src="footer_toggle.js"></script>
+    <script src="News_RSS_Feed.js"></script>
+
+</body>
+</html>

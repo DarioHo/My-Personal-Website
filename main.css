@@ -1,0 +1,386 @@
+/* Warm Monochrome Color Palette with Subtle Colors */
+:root {
+  --primary: #2C2C2C;
+  --secondary: #424242;
+  --accent: #8B7355;  /* Warm brown accent */
+  --warm-light: #F5F2EE;  /* Warm off-white */
+  --warm-gray: #E8E2D8;   /* Warm gray */
+  --text: #333333;
+  --white: #ffffff;
+  --accent-light: #D4C5B2; /* Light warm accent */
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--warm-light);
+  padding-top: 70px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--text);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Navigation Bar */
+.navigation_bar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--primary);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+}
+
+.navigation_bar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.navigation_bar ul li {
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+
+.navigation_bar ul li a {
+  display: block;
+  color: var(--white);
+  text-align: center;
+  padding: 20px 25px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.navigation_bar_active {
+  background-color: var(--accent);
+}
+
+.navigation_bar ul li a:hover:not(.active) {
+  background-color: var(--secondary);
+  transform: translateY(-2px);
+}
+
+/* Live Clock */
+.live_time_clock {
+  font-size: 1.2rem;
+  font-family: 'Courier New', monospace;
+  text-align: right;
+  background-color: var(--white);
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 20px;
+  color: var(--primary);
+  border-left: 4px solid var(--accent);
+}
+
+/* Sliding text container */
+.sliding_text_container {
+  width: 100%;
+  overflow: hidden;
+  background-color: var(--primary);
+  padding: 10px 0;
+  margin: 20px 0;
+  position: relative;
+}
+
+/* The sliding text element */
+.sliding_text {
+  display: inline-block;
+  white-space: nowrap;
+  animation: slideLeft 30s linear infinite; /* Increased from 20s to 40s for slower speed */
+  color: var(--white);
+  font-size: 1.2rem;
+  padding-right: 50px; /* Reduced from 100% to 50px for smaller gap */
+}
+
+/* Define the sliding animation */
+@keyframes slideLeft {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+
+/* Add a gradient fade effect at the edges */
+.sliding_text_container::before,
+.sliding_text_container::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 50px;
+  height: 100%;
+  z-index: 2;
+}
+
+.sliding_text_container::before {
+  left: 0;
+  background: linear-gradient(to right, var(--primary), transparent);
+}
+
+.sliding_text_container::after {
+  right: 0;
+  background: linear-gradient(to left, var(--primary), transparent);
+}
+
+
+/* Content wrapper */
+.content_wrapper {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 40px;
+  gap: 40px;
+}
+
+/* Main Header Section - aligned left */
+.main_header_section {
+  flex: 0 1 800px;
+  margin: 40px 0 40px 40px; /* Changed margin to push it left */
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.main_header_section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(to right, var(--primary), var(--accent));
+  border-radius: 12px 12px 0 0;
+}
+
+.main_header_section h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+.main_header_section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text);
+  padding: 0 20px;
+}
+
+/* Footer */
+footer {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;  /* This ensures the footer spans the full width */
+background-color: var(--primary);
+color: var(--white);
+padding: 15px;
+text-align: center;
+transition: all 0.3s ease;
+position: relative;
+overflow-x: hidden;  /* Prevent horizontal scrolling */
+}
+
+.footer_close-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+width: 30px;
+height: 30px;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 24px;
+color: var(--white);
+cursor: pointer;
+transition: transform 0.3s ease, color 0.3s ease;
+z-index: 10;
+background-color: rgba(255, 255, 255, 0.2);
+border-radius: 50%;
+}
+
+.footer_close-btn:hover {
+transform: scale(1.1);
+color: var(--accent-light);
+background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* Removed previous hidden footer state */
+
+.footer_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-bottom: 10px;
+}
+
+/* Social Media Icons */
+.social_media_image {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s ease;
+}
+
+.social_media_image:hover {
+  transform: translateY(-5px);
+}
+
+.social_media_image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  border-radius: 50%;
+  background-color: var(--white);
+  padding: 5px;
+  transition: all 0.3s ease;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social_media_image:hover img {
+  background-color: var(--accent-light);
+}
+
+.image_overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 50%;
+}
+
+.social_media_image:hover .image_overlay {
+  opacity: 0.3;
+}
+
+/* Additional Styles */
+::selection {
+  background-color: var(--accent);
+  color: var(--white);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .navigation_bar ul {
+    flex-direction: column;
+  }
+  
+  .navigation_bar ul li {
+    width: 100%;
+  }
+  
+  .navigation_bar ul li a {
+    padding: 15px;
+  }
+  
+  .main_header_section {
+    margin: 20px;
+    padding: 30px;
+  }
+  
+  .main_header_section h1 {
+    font-size: 2rem;
+  }
+  
+  .live_time_clock {
+    margin: 10px;
+  }
+}
+
+/* Hover Effects */
+.main_header_section:hover {
+  box-shadow: 0 8px 16px rgba(139, 115, 85, 0.1);
+  transform: translateY(-2px);
+  transition: all 0.3s ease;
+}
+
+/* New RSS Feed Section - Right aligned */
+.rss_feed_section {
+  flex: 0 1 300px; /* Reduced from 800px to 300px */
+  margin: 40px 40px 40px 0;
+  padding: 40px;
+  background-color: var(--white);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.rss_feed_section h1 {
+  color: var(--primary);
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-align: center;
+  letter-spacing: 2px;
+}
+
+#feed div {
+  margin-bottom: 25px;
+  padding: 20px;
+  background-color: var(--primary);
+  border-radius: 8px;
+  color: var(--white);
+}
+
+#feed h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+  color: var(--white);
+}
+
+#feed p {
+  margin: 0 0 15px 0;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--warm-light);
+}
+
+#feed a {
+  display: inline-block;
+  color: var(--accent-light);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+#feed a:hover {
+  color: var(--warm-gray);
+  text-decoration: underline;
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 1200px) {
+  .content_wrapper {
+      flex-direction: column;
+      padding: 0;
+  }
+
+  .main_header_section,
+  .rss_feed_section {
+      flex: none;
+      margin: 20px;
+      padding: 30px;
+      max-width: none;
+  }
+}

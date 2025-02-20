@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Personal blog</title>
+    <link rel="stylesheet" type="text/css" href="blog.css">
+</head>
+<body>
+    <div class="navigation_bar"> 
+        <ul>
+            <li><a href="main.html">Home</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li> 
+            <li><a href="resources.html">Resources</a></li>
+            <li><a class="navigation_bar_active" href="blog.html">Blog</a></li> 
+            <li><a href="photography.html">Photography</a></li> 
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div id="pagination_content"></div>
+      
+    <div class="blog_posts_all">
+        <div class="blog_post_individual">
+            <h2 id="blog_title_1">The Pathetic Truth of Unavoidable Choice</h2>
+            <p id="blog_content_1"></p>
+        </div>
+        
+        <div class="blog_post_individual">
+            <h2 id="blog_title_2">The Reason for Leaving</h2>
+            <p id="blog_content_2"></p>
+        </div>
+    </div>
+
+    <div class="pagination">
+        <a href="#" onclick="changeContent(1)">«</a>
+        <a id="page1" href="#" class="active" onclick="changeContent(1)">1</a>
+        <a id="page2" href="#" onclick="changeContent(2)">2</a>
+        <a href="#" onclick="changeContent(2)">»</a>
+    </div>
+
+    <script src="blog_pagination.js"></script>
+</body>
+</html>
