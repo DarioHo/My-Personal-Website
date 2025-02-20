@@ -13,7 +13,7 @@ function createGallery() {
     const galleryContainer = document.querySelector('.gallery-container');
     
     // Generate image paths (change 1 and 50 to match your actual image range)
-    const images = generateImagePaths(1, 50);
+    const images = generateImagePaths(1, 12);
     
     // Create image elements
     images.forEach(imagePath => {
